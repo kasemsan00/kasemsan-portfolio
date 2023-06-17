@@ -3,6 +3,7 @@ import React from "react";
 const Project = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div ref={ref}>
+      <div className="text-4xl">My Project</div>
       <div>
         <h3>TTRS LiveChat</h3>
         <video autoPlay muted playsInline={true} src={"./media/example-video.mp4"}></video>
