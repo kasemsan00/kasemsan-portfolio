@@ -1,14 +1,16 @@
-import { motion } from "framer-motion";
+const Li = ({ title }: { title: string }) => {
+  return <li className="inline-block cursor-pointer font-bold hover:underline">{title}</li>;
+};
 
 export default function Navbar() {
   return (
     <div className="flex w-full justify-end">
       <ul className="list-none gap-2 flex">
-        <li className="inline-block">Start</li>
-        <li className="inline-block">Skill</li>
-        <li className="inline-block">Project</li>
-        <li className="inline-block">Work</li>
-        <li className="inline-block">Contact</li>
+        <Li title={"Start"} />
+        <Li title={"Skill"} />
+        <Li title={"Project"} />
+        <Li title={"Work"} />
+        <Li title={"Contact"} />
       </ul>
     </div>
   );
