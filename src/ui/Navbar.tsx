@@ -12,7 +12,7 @@ interface LiProps {
 }
 const Li = ({ title, onClickScroll }: LiProps) => {
   return (
-    <li onClick={onClickScroll} className="text-2xl cursor-pointer inline-block font-bold hover:underline">
+    <li onClick={onClickScroll} className="text-2xl stroke-white cursor-pointer inline-block font-bold hover:underline">
       {title}
     </li>
   );
@@ -32,7 +32,7 @@ export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: 
     footerRef.current?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   };
   return (
-    <div className="flex w-full justify-end">
+    <div className="flex w-full sticky top-2 z-10 justify-end">
       <ul className="flex list-none gap-6">
         <Li title={"Start"} onClickScroll={onClickWelcome} />
         <Li title={"Skill"} onClickScroll={onClickSkill} />
