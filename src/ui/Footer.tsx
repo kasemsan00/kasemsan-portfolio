@@ -1,8 +1,7 @@
 import React from "react";
-interface Props {
-  ref: React.Ref<HTMLDivElement>;
-}
 
-export default function Footer({ ref }: Props) {
-  return <div ref={ref}>Footer</div>;
-}
+const Footer = React.forwardRef<HTMLDivElement>((props, ref) => {
+  return <div ref={ref}>Here is footer</div>;
+});
+Footer.displayName = "Footer";
+export default Footer;
