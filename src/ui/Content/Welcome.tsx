@@ -30,17 +30,17 @@ const Welcome = React.forwardRef<HTMLDivElement>((props, ref) => {
         <div
           ref={line1Ref}
           className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black font-bold"
+        pr-5 h-[50px] text-5xl text-black"
         ></div>
         <div
           ref={line2Ref}
           className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black font-bold"
+        pr-5 h-[50px] text-5xl text-black"
         ></div>
         <div
           ref={line3Ref}
           className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black font-bold"
+        pr-5 h-[50px] text-5xl text-black"
         ></div>
       </div>
       <div className="w-fit">Some thing </div>

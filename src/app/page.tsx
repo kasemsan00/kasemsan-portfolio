@@ -14,7 +14,7 @@ export default function Home() {
   const projectRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
   return (
-    <main className="flex min-h-screen flex-col items-center p-10">
+    <main className="flex min-h-screen flex-col items-center p-10 bg-black">
       <Navbar welcomeRef={welcomeRef} skillRef={skillRef} footerRef={footerRef} projectRef={projectRef} />
       <MainContentLayout>
         <Welcome ref={welcomeRef} />

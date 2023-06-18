@@ -19,8 +19,8 @@ const Li = ({ title, onClickScroll }: LiProps) => {
 };
 
 export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: Props) {
-  const onClickWelcome = () => {
-    welcomeRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  const onClickStart = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const onClickSkill = () => {
     skillRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
@@ -34,7 +34,7 @@ export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: 
   return (
     <div className="flex w-full sticky top-2 z-10 justify-end">
       <ul className="flex list-none gap-6">
-        <Li title={"Start"} onClickScroll={onClickWelcome} />
+        <Li title={"Start"} onClickScroll={onClickStart} />
         <Li title={"Skill"} onClickScroll={onClickSkill} />
         <Li title={"My Project"} onClickScroll={onClickProject} />
         <Li title={"Work"} onClickScroll={() => {}} />
