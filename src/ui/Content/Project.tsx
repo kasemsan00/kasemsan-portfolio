@@ -1,31 +1,37 @@
 import React from "react";
 import Image from "next/image";
 
+const ImageProject = () => {
+  return (
+    <div className="flex">
+      <Image
+        className="rounded-2xl w-[200px] h-[200px] hover:scale-110 transition"
+        src={require("@/assets/media/project-image/pic01.jpg")}
+        alt={"Pic01"}
+      />
+      <Image
+        className="rounded-2xl w-[200px] h-[200px] hover:scale-110 transition"
+        src={require("@/assets/media/project-image/pic02.jpg")}
+        alt={"Pic02"}
+      />
+      <Image
+        className="rounded-2xl w-[200px] h-[200px] hover:scale-110 transition"
+        src={require("@/assets/media/project-image/pic03.jpg")}
+        alt={"Pic03"}
+      />
+    </div>
+  );
+};
+
 const Project = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className="flex flex-col gap-10" ref={ref}>
       <div className="text-4xl text-white">My Project</div>
-      <div>
-        <div className="flex">
+      <div className="flex flex-col">
+        <div className="flex cursor-pointer">
           <div>
             <h3 className="text-white text-2xl">LiveChat</h3>
-            <div className="flex">
-              <Image
-                className="rounded-2xl w-[400px] h-[400px]"
-                src={require("@/assets/media/project-image/pic01.jpg")}
-                alt={"Pic01"}
-              />
-              <Image
-                className="rounded-2xl w-[400px] h-[400px]"
-                src={require("@/assets/media/project-image/pic02.jpg")}
-                alt={"Pic02"}
-              />
-              <Image
-                className="rounded-2xl w-[400px] h-[400px]"
-                src={require("@/assets/media/project-image/pic03.jpg")}
-                alt={"Pic03"}
-              />
-            </div>
+            <ImageProject />
           </div>
           <div className="text-white">2023</div>
         </div>
