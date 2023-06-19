@@ -12,7 +12,10 @@ interface LiProps {
 }
 const Li = ({ title, onClickScroll }: LiProps) => {
   return (
-    <li onClick={onClickScroll} className="text-2xl stroke-white cursor-pointer inline-block font-bold hover:underline">
+    <li
+      onClick={onClickScroll}
+      className="text-2xl text-white stroke-white cursor-pointer inline-block font-bold hover:underline"
+    >
       {title}
     </li>
   );
@@ -26,7 +29,8 @@ export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: 
     skillRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   };
   const onClickProject = () => {
-    projectRef.current?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    console.log(projectRef);
+    projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   };
   const onClickFooter = () => {
     footerRef.current?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });

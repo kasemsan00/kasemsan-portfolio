@@ -8,90 +8,90 @@ const SkillIcon = ({ path, alt }: { path: string; alt: string }) => {
 const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div ref={ref} className="flex flex-col gap-10">
-      <div className="text-5xl">Skills</div>
+      <div className="text-5xl text-white">Skills</div>
       <div className="w-full grid grid-cols-4">
         <div>
           <div className="flex flex-row gap-2">
-            <SkillIcon path={require("../../assets/media/html.svg")} alt={"HTML"} />
-            <SkillIcon path={require("../../assets/media/javascript.svg")} alt={"javascript"} />
-            <SkillIcon path={require("../../assets/media/php.svg")} alt={"PHP"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/html.svg")} alt={"HTML"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/javascript.svg")} alt={"javascript"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/php.svg")} alt={"PHP"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>HTML</li>
-              <li>PHP</li>
-              <li>Javascript</li>
+              <li className="text-white">HTML</li>
+              <li className="text-white">PHP</li>
+              <li className="text-white">Javascript</li>
             </ul>
           </div>
         </div>
         <div>
           <div className="flex flex-row gap-2">
-            <SkillIcon path={require("../../assets/media/react.png")} alt={"React"} />
-            <SkillIcon path={require("../../assets/media/nextjs.svg")} alt={"NextJS"} />
-            <SkillIcon path={require("../../assets/media/angular.svg")} alt={"Angular"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/react.png")} alt={"React"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/nextjs.svg")} alt={"NextJS"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/angular.svg")} alt={"Angular"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>React</li>
-              <li>NextJS</li>
-              <li>Angular</li>
+              <li className="text-white">React</li>
+              <li className="text-white">NextJS</li>
+              <li className="text-white">Angular</li>
             </ul>
           </div>
         </div>
         <div>
           <div className="flex flex-row gap-2">
-            <SkillIcon path={require("../../assets/media/nodejs.svg")} alt={"NodeJS"} />
-            <SkillIcon path={require("../../assets/media/go.svg")} alt={"Go"} />
-            <SkillIcon path={require("../../assets/media/docker.svg")} alt={"Docker"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/nodejs.svg")} alt={"NodeJS"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/go.svg")} alt={"Go"} />
+            <SkillIcon path={require("@/assets/media/skill-icon/docker.svg")} alt={"Docker"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>NodeJS</li>
-              <li>Go</li>
-              <li>Docker</li>
+              <li className="text-white">NodeJS</li>
+              <li className="text-white">Go</li>
+              <li className="text-white">Docker</li>
             </ul>
           </div>
         </div>
         <div>
           <div className="flex flex-row gap-3">
-            <SkillIcon path={require("../../assets/media/tailwind.svg")} alt={"Tailwind"} />
-            <SkillIcon path={require("../../assets/media/css.svg")} alt={"CSS"} />
-            <SkillIcon path={require("../../assets/media/bootstrap.svg")} alt={"Bootstrap"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/tailwind.svg")} alt={"Tailwind"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/css.svg")} alt={"CSS"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/bootstrap.svg")} alt={"Bootstrap"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>Tailwind</li>
-              <li>CSS</li>
-              <li>Bootstrap</li>
-              <li>Farmer Motion</li>
+              <li className="text-white">Tailwind</li>
+              <li className="text-white">CSS</li>
+              <li className="text-white">Bootstrap</li>
+              <li className="text-white">Farmer Motion</li>
             </ul>
           </div>
         </div>
         <div>
           <div className="flex flex-row gap-2">
-            <SkillIcon path={require("../../assets/media/webrtc.svg")} alt={"WebRTC"} />
-            <SkillIcon path={require("../../assets/media/livekit.png")} alt={"LiveKit"} />
-            <SkillIcon path={require("../../assets/media/mediasoup.png")} alt={"Mediasoup"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/webrtc.svg")} alt={"WebRTC"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/livekit.png")} alt={"LiveKit"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/mediasoup.png")} alt={"Mediasoup"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>WebRTc</li>
-              <li>LiveKit</li>
-              <li>Mediasoup</li>
+              <li className="text-white">WebRTc</li>
+              <li className="text-white"> LiveKit</li>
+              <li className="text-white">Me diasoup</li>
             </ul>
           </div>
         </div>
         <div>
           <div className="flex flex-row gap-2">
-            <SkillIcon path={require("../../assets/media/postgresql.svg")} alt={"PostgreSQL"} />
-            <SkillIcon path={require("../../assets/media/mysql.svg")} alt={"MySQL"} />
-            <SkillIcon path={require("../../assets/media/mongodb.svg")} alt={"MongoDB"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/postgresql.svg")} alt={"PostgreSQL"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/mysql.svg")} alt={"MySQL"} />
+            <SkillIcon path={require("../../assets/media/skill-icon/mongodb.svg")} alt={"MongoDB"} />
           </div>
           <div>
             <ul className="text-2xl">
-              <li>PostgreSQL</li>
-              <li>MySQL</li>
-              <li>MongoDB</li>
+              <li className="text-white">PostgreSQL</li>
+              <li className="text-white">MySQL</li>
+              <li className="text-white">MongoDB</li>
             </ul>
           </div>
         </div>

@@ -13,7 +13,6 @@ const Welcome = React.forwardRef<HTMLDivElement>((props, ref) => {
       let i = 0;
       const interval = setInterval(() => {
         ref.current.innerHTML += text.charAt(i++);
-        console.log("Text");
         if (i === text.length) {
           clearInterval(interval);
         }
@@ -26,21 +25,21 @@ const Welcome = React.forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <div ref={ref} className="flex flex-row">
-      <div className="flex flex-col gap-6 w-3/4">
+      <div className="flex flex-col gap-6 w-[1200px]">
         <div
           ref={line1Ref}
-          className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black"
+          className="overflow-hidden whitespace-nowrap
+        pr-5 h-[50px] text-5xl text-white"
         ></div>
         <div
           ref={line2Ref}
-          className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black"
+          className="overflow-hidden whitespace-nowrap
+        pr-5 h-[50px] text-5xl text-white"
         ></div>
         <div
           ref={line3Ref}
-          className="overflow-hidden whitespace-nowrap border-r-4 border-r-white
-        pr-5 h-[50px] text-5xl text-black"
+          className="overflow-hidden whitespace-nowrap
+        pr-5 h-[50px] text-5xl text-white"
         ></div>
       </div>
       <div className="w-fit">Some thing </div>
