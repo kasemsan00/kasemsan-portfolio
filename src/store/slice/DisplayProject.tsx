@@ -8,6 +8,6 @@ interface DisplayProjectState {
 export const useDisplayStore = create<DisplayProjectState>(
   (set: SetState<DisplayProjectState>) => ({
     display: false,
-    setDisplay: (value) => set((state) => ({ display: value })),
+    setDisplay: (value) => set(() => ({ display: value })),
   })
 );
