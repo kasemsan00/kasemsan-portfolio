@@ -7,6 +7,7 @@ import Footer from "@/ui/Footer";
 import { useRef } from "react";
 import MainContentLayout from "@/ui/Layout/MainContentLayout";
 import MySkill from "@/ui/Content/MySkill";
+import DisplayProject from "@/ui/DisplayProject";
 
 export default function Home() {
   const welcomeRef = useRef<HTMLDivElement>(null);
@@ -14,9 +15,15 @@ export default function Home() {
   const projectRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
   return (
-    <main className="flex min-h-screen flex-col items-center p-10 bg-black">
-      <Navbar welcomeRef={welcomeRef} skillRef={skillRef} footerRef={footerRef} projectRef={projectRef} />
+    <main className="overflow-hidden flex min-h-screen flex-col items-center bg-gradient-radial from-blue-800 to-blue-950">
+      <DisplayProject />
       <MainContentLayout>
+        <Navbar
+          welcomeRef={welcomeRef}
+          skillRef={skillRef}
+          footerRef={footerRef}
+          projectRef={projectRef}
+        />
         <Welcome ref={welcomeRef} />
         <MySkill ref={skillRef} />
         <Project ref={projectRef} />

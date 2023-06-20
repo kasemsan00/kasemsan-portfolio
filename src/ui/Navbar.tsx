@@ -29,7 +29,6 @@ export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: 
     skillRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   };
   const onClickProject = () => {
-    console.log(projectRef);
     projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   };
   const onClickFooter = () => {
