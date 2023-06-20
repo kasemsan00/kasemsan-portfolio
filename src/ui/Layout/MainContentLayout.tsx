@@ -5,5 +5,5 @@ interface Props {
 }
 
 export default function MainContentLayout({ children }: Props) {
-  return <div className="flex flex-col p-16 gap-20">{children}</div>;
+  return <div className="flex flex-col gap-20">{children}</div>;
 }

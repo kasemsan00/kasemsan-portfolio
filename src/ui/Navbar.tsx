@@ -1,7 +1,6 @@
 import React from "react";
 
 interface Props {
-  welcomeRef: React.RefObject<HTMLDivElement>;
   skillRef: React.RefObject<HTMLDivElement>;
   projectRef: React.RefObject<HTMLDivElement>;
   footerRef: React.RefObject<HTMLDivElement>;
@@ -21,7 +20,7 @@ const Li = ({ title, onClickScroll }: LiProps) => {
   );
 };
 
-export default function Navbar({ welcomeRef, skillRef, projectRef, footerRef }: Props) {
+export default function Navbar({ skillRef, projectRef, footerRef }: Props) {
   const onClickStart = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

@@ -1,27 +1,42 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
-import DisplayProject from "@/ui/DisplayProject";
+import { useDisplayStore } from "@/store/slice/DisplayProject";
+import { motion } from "framer-motion";
+const variants = {
+  whileHover: { opacity: 1, scale: 1.1 },
+};
 
 const ImageProject = ({ projectName, picture }: { projectName: string; picture: string }) => {
+  const { setDisplay } = useDisplayStore();
   const projectDetailRef = useRef<HTMLDivElement>(null);
+  const [isDisplayText, setIsDisplayText] = useState(false);
   const onProjectHover = () => {
-    projectDetailRef.current?.classList.remove("hidden");
+    setIsDisplayText(true);
   };
   const onProjectMouseLeave = () => {
-    projectDetailRef.current?.classList.add("hidden");
+    setIsDisplayText(false);
   };
+  const onProjectClick = () => {
+    setDisplay(true);
+  };
+
   return (
     <div
       className="flex w-[200px] h-[200px] cursor-pointer overflow-hidden rounded-2xl"
+      onClick={onProjectClick}
       onMouseOver={onProjectHover}
       onMouseLeave={onProjectMouseLeave}
     >
-      <div
+      <motion.div
         ref={projectDetailRef}
-        className="hidden bg-gradient-to-b from-transparent to-black z-10 h-[50px] self-end w-full"
+        className="flex flex-1 justify-center items-center bg-gradient-to-b from-transparent to-black z-10 h-[70px] self-end w-full"
+        animate={isDisplayText ? "whileHover" : ""}
+        initial={{ opacity: 0 }}
+        variants={variants}
+        transition={{ duration: 0.2 }}
       >
         <div className="text-white w-full flex flex-1 justify-center">{projectName}</div>
-      </div>
+      </motion.div>
       <Image
         className="w-[200px] h-[200px] rounded-2xl absolute"
         src={require("@/assets/media/project-image/" + picture)}
@@ -36,7 +51,7 @@ const Project = React.forwardRef<HTMLDivElement>((props, ref) => {
     <>
       <div className="flex flex-col gap-10" ref={ref}>
         <div className="text-4xl text-white">My Project</div>
-        <div className="flex w-full gap-5">
+        <div className="flex flex-wrap w-full gap-5">
           <ImageProject projectName={"Dashboard"} picture={"pic07.jpg"} />
           <ImageProject projectName={"Conference"} picture={"pic02.jpg"} />
           <ImageProject projectName={"Video Relay Service"} picture={"pic03.jpg"} />
