@@ -15,13 +15,13 @@ export default function Home() {
   const projectRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
   return (
-    <main className=" flex min-h-screen flex-col items-center bg-gradient-radial from-blue-800 to-blue-950">
+    <main className="flex flex-col w-screen h-screen items-center bg-gradient-radial from-blue-800 to-blue-950">
       <DisplayProject />
       <MainContentLayout>
         <Navbar skillRef={skillRef} footerRef={footerRef} projectRef={projectRef} />
         <Welcome ref={welcomeRef} />
-        <MySkill ref={skillRef} />
-        <Project ref={projectRef} />
+        {/*<MySkill ref={skillRef} />*/}
+        {/*<Project ref={projectRef} />*/}
       </MainContentLayout>
       <Footer ref={footerRef} />
     </main>

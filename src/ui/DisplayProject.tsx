@@ -9,7 +9,6 @@ export default function DisplayProject() {
     setDisplay(false);
   };
   useEffect(() => {
-    console.log(display);
     if (display) {
       modalRef.current?.classList.remove("hidden");
     }
@@ -20,7 +19,6 @@ export default function DisplayProject() {
         Close
       </div>
       <div>NextProject</div>
-      HELLO
     </div>
   );
 }
