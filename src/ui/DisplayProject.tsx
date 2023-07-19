@@ -15,11 +15,18 @@ export default function DisplayProject() {
     }
   }, [display]);
   return (
-    <div className="hidden fixed bg-gray-500 w-full h-screen min-h-screen" ref={modalRef}>
-      <div className="p-3 bg-blue-950 w-fit rounded-xl cursor-pointer" onClick={handleCloseModal}>
-        Close
+    <div className="fixed hidden h-screen min-h-screen w-full max-w-7xl bg-gray-500" ref={modalRef}>
+      <div className="absolute right-0 flex gap-2 p-4">
+        <div
+          className="flex w-36 cursor-pointer justify-center rounded-xl bg-blue-950 p-3 text-white"
+          onClick={handleCloseModal}
+        >
+          Close
+        </div>
+        <div className="flex w-36 cursor-pointer justify-center rounded-xl bg-blue-950 p-3 text-white">
+          NextProject
+        </div>
       </div>
-      <div>NextProject</div>
     </div>
   );
 }
