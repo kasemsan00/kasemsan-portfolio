@@ -8,6 +8,7 @@ export default function DisplayProject() {
     modalRef.current?.classList.add("hidden");
     setDisplay(false);
   };
+
   useEffect(() => {
     if (display) {
       modalRef.current?.classList.remove("hidden");
