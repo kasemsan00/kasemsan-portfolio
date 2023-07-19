@@ -14,8 +14,9 @@ export default function DisplayProject() {
       modalRef.current?.classList.remove("hidden");
     }
   }, [display]);
+
   return (
-    <div className="fixed hidden h-screen min-h-screen w-full max-w-7xl bg-gray-500" ref={modalRef}>
+    <div className="fixed hidden h-full min-h-screen w-full max-w-7xl bg-gray-500" ref={modalRef}>
       <div className="absolute right-0 flex gap-2 p-4">
         <div
           className="flex w-36 cursor-pointer justify-center rounded-xl bg-blue-950 p-3 text-white"
@@ -26,6 +27,10 @@ export default function DisplayProject() {
         <div className="flex w-36 cursor-pointer justify-center rounded-xl bg-blue-950 p-3 text-white">
           NextProject
         </div>
+      </div>
+      <div className="flex flex-row">
+        <div className="h-96 w-full bg-white">View Project Video</div>
+        <div className="w-full">Project Detail</div>
       </div>
     </div>
   );
