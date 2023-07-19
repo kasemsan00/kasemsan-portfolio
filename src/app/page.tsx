@@ -4,7 +4,7 @@ import Navbar from "@/ui/Navbar";
 import Welcome from "@/ui/Content/Welcome";
 import Project from "@/ui/Content/Project";
 import Footer from "@/ui/Footer";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import MainContentLayout from "@/ui/Layout/MainContentLayout";
 import MySkill from "@/ui/Content/MySkill";
 import DisplayProject from "@/ui/DisplayProject";

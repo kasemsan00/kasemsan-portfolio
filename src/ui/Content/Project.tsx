@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { useDisplayStore } from "@/store/slice/DisplayProject";
 import { motion } from "framer-motion";
+import ProjectList from "../../../ProjectList.json";
+
 const variants = {
   whileHover: { opacity: 1, scale: 1.1 },
 };
@@ -47,18 +49,17 @@ const ImageProject = ({ projectName, picture }: { projectName: string; picture: 
 };
 
 const Project = React.forwardRef<HTMLDivElement>((props, ref) => {
+  const { display } = useDisplayStore();
   return (
     <>
       <div className="flex flex-col gap-10" ref={ref}>
         <div className="text-4xl text-white">My Project</div>
-        <div className="flex w-full flex-wrap justify-center gap-5">
-          <ImageProject projectName={"Dashboard"} picture={"pic07.jpg"} />
-          <ImageProject projectName={"Conference"} picture={"pic02.jpg"} />
-          <ImageProject projectName={"Video Relay Service"} picture={"pic03.jpg"} />
-          <ImageProject projectName={"WebRTC SMS"} picture={"pic04.jpg"} />
-          <ImageProject projectName={"LiveChat"} picture={"pic01.jpg"} />
-          <ImageProject projectName={"Survey"} picture={"pic05.jpg"} />
-          <ImageProject projectName={"SQR"} picture={"pic06.jpg"} />
+        <div className={`${display ? "-z-10" : ""} flex w-full flex-wrap justify-center gap-5`}>
+          {ProjectList.map((item, index) => {
+            return (
+              <ImageProject key={index} projectName={item.project_name} picture={item.image} />
+            );
+          })}
         </div>
       </div>
     </>
