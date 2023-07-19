@@ -22,23 +22,23 @@ const ImageProject = ({ projectName, picture }: { projectName: string; picture: 
 
   return (
     <div
-      className="flex w-[200px] h-[200px] cursor-pointer overflow-hidden rounded-2xl"
+      className="flex h-[200px] w-[200px] cursor-pointer overflow-hidden rounded-2xl"
       onClick={onProjectClick}
       onMouseOver={onProjectHover}
       onMouseLeave={onProjectMouseLeave}
     >
       <motion.div
         ref={projectDetailRef}
-        className="flex flex-1 justify-center items-center bg-gradient-to-b from-transparent to-black z-10 h-[70px] self-end w-full"
+        className="z-10 flex h-[70px] w-full flex-1 items-center justify-center self-end bg-gradient-to-b from-transparent to-black"
         animate={isDisplayText ? "whileHover" : ""}
         initial={{ opacity: 0 }}
         variants={variants}
         transition={{ duration: 0.2 }}
       >
-        <div className="text-white w-full flex flex-1 justify-center">{projectName}</div>
+        <div className="flex w-full flex-1 justify-center text-white">{projectName}</div>
       </motion.div>
       <Image
-        className="w-[200px] h-[200px] rounded-2xl absolute"
+        className="absolute h-[200px] w-[200px] rounded-2xl"
         src={require("@/assets/media/project-image/" + picture)}
         alt={"Pic01"}
       />
@@ -51,7 +51,7 @@ const Project = React.forwardRef<HTMLDivElement>((props, ref) => {
     <>
       <div className="flex flex-col gap-10" ref={ref}>
         <div className="text-4xl text-white">My Project</div>
-        <div className="flex flex-wrap w-full gap-5">
+        <div className="flex w-full flex-wrap justify-center gap-5">
           <ImageProject projectName={"Dashboard"} picture={"pic07.jpg"} />
           <ImageProject projectName={"Conference"} picture={"pic02.jpg"} />
           <ImageProject projectName={"Video Relay Service"} picture={"pic03.jpg"} />

@@ -2,16 +2,16 @@ import React from "react";
 import Image from "next/image";
 
 const SkillIcon = ({ path, alt }: { path: string; alt: string }) => {
-  return <Image className="w-14 h-14 object-contain" src={path} alt={alt} />;
+  return <Image className="h-14 w-14 object-contain" src={path} alt={alt} />;
 };
 
 const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="flex flex-col gap-10">
+    <div ref={ref} className="flex flex-col justify-center  gap-10">
       <div className="text-5xl text-white">Skills</div>
-      <div className="w-full grid sm:grid-cols-2 md:grid-cols-6">
+      <div className="grid w-full gap-11 sm:grid-cols-2 md:grid-cols-3">
         <div>
-          <div className="flex flex-row gap-2 mb-2">
+          <div className="mb-2 flex flex-row gap-2">
             <SkillIcon path={require("@/assets/media/skill-icon/html.svg")} alt={"HTML"} />
             <SkillIcon
               path={require("@/assets/media/skill-icon/javascript.svg")}
@@ -26,7 +26,7 @@ const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row gap-2 mb-2">
+          <div className="mb-2 flex flex-row gap-2">
             <SkillIcon path={require("@/assets/media/skill-icon/react.png")} alt={"React"} />
             <SkillIcon path={require("@/assets/media/skill-icon/nextjs.svg")} alt={"NextJS"} />
             <SkillIcon path={require("@/assets/media/skill-icon/angular.svg")} alt={"Angular"} />
@@ -38,7 +38,7 @@ const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row gap-2 mb-2">
+          <div className="mb-2 flex flex-row gap-2">
             <SkillIcon path={require("@/assets/media/skill-icon/nodejs.svg")} alt={"NodeJS"} />
             <SkillIcon path={require("@/assets/media/skill-icon/go.svg")} alt={"Go"} />
             <SkillIcon path={require("@/assets/media/skill-icon/docker.svg")} alt={"Docker"} />
@@ -50,7 +50,7 @@ const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row gap-3 mb-2">
+          <div className="mb-2 flex flex-row gap-3">
             <SkillIcon
               path={require("../../assets/media/skill-icon/tailwind.svg")}
               alt={"Tailwind"}
@@ -69,7 +69,7 @@ const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row gap-2 mb-2">
+          <div className="mb-2 flex flex-row gap-2">
             <SkillIcon path={require("../../assets/media/skill-icon/webrtc.svg")} alt={"WebRTC"} />
             <SkillIcon
               path={require("../../assets/media/skill-icon/livekit.png")}
@@ -87,7 +87,7 @@ const MySkill = React.forwardRef<HTMLDivElement>((props, ref) => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row gap-2 mb-2">
+          <div className="mb-2 flex flex-row gap-2">
             <SkillIcon
               path={require("../../assets/media/skill-icon/postgresql.svg")}
               alt={"PostgreSQL"}

@@ -40,7 +40,7 @@ const Welcome = React.forwardRef<HTMLDivElement>((props, ref) => {
       xl:w-[1280]
       "
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 text-4xl">
         <div ref={line1Ref} className={textClass}></div>
         <div ref={line2Ref} className={textClass}></div>
         <div ref={line3Ref} className={textClass}></div>
